@@ -4,13 +4,15 @@ import com.yangyi.sell.dataobject.ProductCategory;
 import com.yangyi.sell.repository.ProductCategoryRepository;
 import com.yangyi.sell.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class CategoryServiceImpl implements CategoryService {
 
     @Autowired
-    ProductCategoryRepository productCategoryRepository;
+    private ProductCategoryRepository productCategoryRepository;
 
     @Override
     public ProductCategory findOne(Integer categoryId) {
